@@ -3,14 +3,17 @@ import React from 'react'
 
 const App = () => {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <View style={{ margin: 5, flexDirection: "row", justifyContent:"space-between", borderWidth: 1 }}>
-        <Text>Welcome to my blog</Text>
-        <Text>Lets Start</Text>
+    <SafeAreaView style={styles.flex}>
+      <View style={[styles.row,{ margin: 5,flexWrap:"wrap", justifyContent:"space-between" }]}>
+        <Text style={{fontSize:18,fontWeight:"bold",}}>Welcome to my blog</Text>
+        
       </View>
     </SafeAreaView>
   )
 }
 
 export default App
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  flex:{flex:1},
+  row:{flexDirection:"row"}
+})
